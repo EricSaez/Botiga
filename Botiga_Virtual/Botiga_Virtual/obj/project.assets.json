@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saeze\\Desktop\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
+      "projectUniqueName": "C:\\Users\\saeze\\Documents\\GitHub\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
       "projectName": "Botiga_Virtual",
-      "projectPath": "C:\\Users\\saeze\\Desktop\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
+      "projectPath": "C:\\Users\\saeze\\Documents\\GitHub\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
       "packagesPath": "C:\\Users\\saeze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saeze\\Desktop\\Botiga_Virtual\\Botiga_Virtual\\obj\\",
+      "outputPath": "C:\\Users\\saeze\\Documents\\GitHub\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
