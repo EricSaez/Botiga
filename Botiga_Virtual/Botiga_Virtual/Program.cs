@@ -54,11 +54,11 @@ namespace Botiga_Virtual
                         break;
                     case '3':
                         Console.Clear();
-                        //AmpliarTenda(nEl);
+                        AmpliarTenda(ref producte, ref preu);
                         break;
                     case '4':
                         Console.Clear();
-                        //ModificarPreu();
+                        ModificarPreu(producte, ref preu);
                         break;
                     case '5':
                         Console.Clear();
@@ -87,10 +87,10 @@ namespace Botiga_Virtual
         }
         static void AfegirProducte(string producte, double preu)
         {
-                Console.WriteLine("Introdueix el nom del producte a afegir");
-                producte = Console.ReadLine();
-                Console.WriteLine("Introdueix el preu de " + producte);
-                preu = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Introdueix el nom del producte a afegir");
+            producte = Console.ReadLine();
+            Console.WriteLine("Introdueix el preu de " + producte);
+            preu = Convert.ToDouble(Console.ReadLine());
         }
         static void AfegirProducteS(string[] producte, double[] preu)
         {
@@ -102,13 +102,49 @@ namespace Botiga_Virtual
                 preu[i] = Convert.ToDouble(Console.ReadLine());
             }
         }
-        static void Mostrar(string[] producte, double[] preu) 
+        static void Mostrar(string[] producte, double[] preu)
         {
             Console.WriteLine("Llistat de productes i preus");
-            for (int i = 0;i < producte.Length;i++)
+            for (int i = 0; i < producte.Length; i++)
             {
                 Console.Write("{0} ", "Nom :" + producte[i] + "Preu:" + preu[i]);
                 Console.WriteLine();
+            }
+        }
+        static void AmpliarTenda(ref string[] productes, ref double[] preus)
+        {
+            int numero;
+            Console.WriteLine("La tenda ara mateix té una capacitat de " + productes.Length + " producte/s.");
+            Console.WriteLine("Quants elements vols ampliar la cistella?");
+            numero = Convert.ToInt32(Console.ReadLine());
+            string[] aux = new string[productes.Length + numero];
+            double[] auxpreus = new double[productes.Length + numero];
+            for (int i = 0; i < productes.Length; i++)
+            {
+                aux[i] = productes[i];
+                auxpreus[i] = preus[i];
+            }
+            productes = aux;
+            preus = auxpreus;
+        }
+        static void ModificarPreu(string[] productes, ref double[] preu)
+        {
+            string nom;
+            Console.WriteLine("El preu de quin producte vols modificar?");
+            for (int i = 0; i < productes.Length; i++)
+            {
+                Console.Write(productes[i] + "  ");
+            }
+            Console.WriteLine();
+            nom = Console.ReadLine();
+            for (int i = 0; i < productes.Length; i++)
+            {
+                if (productes[i] == nom)
+                {
+                    Console.WriteLine("El preu original era de: " + preu[i]);
+                    Console.WriteLine("Quin preu vols afegir ara?");
+                    preu[i] = Convert.ToInt32(Console.ReadLine());
+                }
             }
         }
     }
