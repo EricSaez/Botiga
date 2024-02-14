@@ -1,3 +1,21 @@
+<<<<<<< Updated upstream
+=======
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.AssemblyInfoInputs.cache
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.AssemblyInfo.cs
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.csproj.CoreCompileInputs.cache
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.sourcelink.json
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.exe
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.deps.json
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.runtimeconfig.json
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.dll
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.pdb
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.dll
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\refint\Botiga_Virtual.dll
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.pdb
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.genruntimeconfig.cache
+C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\ref\Botiga_Virtual.dll
+>>>>>>> Stashed changes
 C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.exe
 C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.deps.json
 C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.runtimeconfig.json

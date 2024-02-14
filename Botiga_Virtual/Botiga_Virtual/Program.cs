@@ -32,25 +32,25 @@ namespace Botiga_Virtual
         static void Menu()
         {
             int opcio;
-            int nEl = 5;
-            string[] producte = new string[nEl];
-            double[] preu = new double[nEl];
+            int nEl = 0;
+            string[] producte = new string[5];
+            double[] preu = new double[5];
             do
             {
                 Console.Clear();
                 Console.Write(MenuLlistat());
-                Console.WriteLine("(Recordem que la botiga té " + nEl + ". Ho ha de tenir en compter al hora d'afegir productes. Si vol ampliar la tenda premi 3)");
+                Console.WriteLine("(Ara la botiga té " + nEl + " productes afegits i té " + producte.Length + " de capacitat màxima" + ". Ho has de tenir en compte a l'hora d'afegir productes. Si vol ampliar la tenda premi 3)");
                 Console.Write("Escull una opcio: ");
                 opcio = Convert.ToChar(Console.ReadLine());
                 switch (opcio)
                 {
                     case '1':
                         Console.Clear();
-                        Mostrar(producte, preu);
+                        AfegirProducte(producte, ref preu, ref nEl);
                         break;
                     case '2':
                         Console.Clear();
-                        AfegirProducteS(producte, preu);
+                        AfegirProducteS(producte, ref preu, ref nEl);
                         break;
                     case '3':
                         Console.Clear();
@@ -62,7 +62,7 @@ namespace Botiga_Virtual
                         break;
                     case '5':
                         Console.Clear();
-                        //ModificarProducte();
+                        ModificarProducte(producte);
                         break;
                     case '6':
                         Console.Clear();
@@ -85,21 +85,26 @@ namespace Botiga_Virtual
             } while (opcio != 'Q' && opcio != 'q');
 
         }
-        static void AfegirProducte(string producte, double preu)
+        static void AfegirProducte(string[] producte, ref double[] preu, ref int nEl)
         {
             Console.WriteLine("Introdueix el nom del producte a afegir");
-            producte = Console.ReadLine();
-            Console.WriteLine("Introdueix el preu de " + producte);
-            preu = Convert.ToDouble(Console.ReadLine());
+            producte[nEl] = Console.ReadLine();
+            Console.WriteLine("Introdueix el preu de " + producte[nEl]);
+            preu[nEl] = Convert.ToDouble(Console.ReadLine());
+            nEl++;
         }
-        static void AfegirProducteS(string[] producte, double[] preu)
+        static void AfegirProducteS(string[] producte, ref double[] preu, ref int nEl)
         {
+            Console.WriteLine("Per deixar d'afegir productes escriu -1");
             for (int i = 0; i < producte.Length; i++)
             {
                 Console.WriteLine("Introdueix el nom del producte a afegir");
                 producte[i] = Console.ReadLine();
+                if (producte[i] == "-1") break;
                 Console.WriteLine("Introdueix el preu de " + producte[i]);
                 preu[i] = Convert.ToDouble(Console.ReadLine());
+                if (preu[i] == -1) break;
+                nEl++;
             }
         }
         static void Mostrar(string[] producte, double[] preu)
@@ -107,9 +112,10 @@ namespace Botiga_Virtual
             Console.WriteLine("Llistat de productes i preus");
             for (int i = 0; i < producte.Length; i++)
             {
-                Console.Write("{0} ", "Nom :" + producte[i] + "Preu:" + preu[i]);
+                Console.Write("{0} ", "Nom: " + producte[i] + "Preu: " + preu[i]);
                 Console.WriteLine();
             }
+            Thread.Sleep(5000);
         }
         static void AmpliarTenda(ref string[] productes, ref double[] preus)
         {
@@ -144,6 +150,26 @@ namespace Botiga_Virtual
                     Console.WriteLine("El preu original era de: " + preu[i]);
                     Console.WriteLine("Quin preu vols afegir ara?");
                     preu[i] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+        }
+        static void ModificarProducte(string[] productes)
+        {
+            string nom;
+            Console.WriteLine("El nom de quin producte vols modificar?");
+            for (int i = 0; i < productes.Length; i++)
+            {
+                Console.Write(productes[i] + "  ");
+            }
+            Console.WriteLine();
+            nom = Console.ReadLine();
+            for (int i = 0; i < productes.Length; i++)
+            {
+                if (productes[i] == nom)
+                {
+                    Console.WriteLine("Quin nom vols que tingui ara?");
+                    productes[i] = Console.ReadLine();
+                    Console.WriteLine(nom + " ha pasat a ser " + productes[i]);
                 }
             }
         }
