@@ -1,4 +1,5 @@
-﻿using System.Runtime;
+﻿using System.Net.Http.Headers;
+using System.Runtime;
 
 namespace Botiga_Virtual
 {
@@ -6,14 +7,58 @@ namespace Botiga_Virtual
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(MenuLlistat());
-            Menu();
+            Console.WriteLine(MenuPrincipal());
+            MenuLlistat();
         }
-        static string MenuLlistat()
+        // MENÚS PRINCIPALS PER ESCOLLIR CARACTERÍSTIQUES DE BOTIGA O DE CISTELLA
+        static string MenuPrincipal() 
+        {
+            string MenuPrincipal =
+               "╔══════════════════════════════════════════════════╗\n" +
+               "║                   * Benvingut *                  ║ \n" +
+               "╠══════════════════════════════════════════════════╣ \n" +
+               "║      1) Anar a característiques de la botiga     ║ \n" +
+               "║      2) Anar a característiques de la cistella   ║ \n" +
+               "║      q) Sortir                                   ║ \n" +
+               "╚══════════════════════════════════════════════════╝ \n";
+            return MenuPrincipal;
+
+        }
+        static void MenuLlistat()
+        {
+            int opcio;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine(MenuPrincipal());
+                Console.Write("Escull una opcio: ");
+                opcio = Convert.ToChar(Console.ReadLine());
+                switch (opcio)
+                {
+                    case '1':
+                        Console.Clear();
+                        Console.WriteLine(MenuBotiga());
+                        MenuEscollirBotiga();
+                        break;
+                    case '2':
+                        Console.Clear();
+                        Console.WriteLine(MenuCistella());
+                        MenuEscollirCistella();
+                        break;
+                    case 'q':
+                        break;
+                    case 'Q':
+                        break;
+                }
+            } while (opcio != 'Q' && opcio != 'q');
+
+        }
+        // PRIMER MENÚ DE BOTIGA
+        static string MenuBotiga()
         {
             string TextMenu =
                "╔══════════════════════════════════════════════════╗\n" +
-               "║                      * Botiga *                  ║ \n" +
+               "║                   * Botiga *                     ║ \n" +
                "╠══════════════════════════════════════════════════╣ \n" +
                "║              1) Afegir producte                  ║ \n" +
                "║              2) Afegir producteS                 ║ \n" +
@@ -23,13 +68,16 @@ namespace Botiga_Virtual
                "║              6) Ordenar producte                 ║ \n" +
                "║              7) Ordenar preus                    ║ \n" +
                "║              8) Mostrar                          ║ \n" +
+               "║              9) BotigaToString                   ║ \n" +
+               "║              T) Anar a menu anterior             ║ \n" +
                "║                                                  ║ \n" +
                "║              q) Sortir                           ║ \n" +
                "╚══════════════════════════════════════════════════╝ \n";
 
             return TextMenu;
         }
-        static void Menu()
+        // ESCULL L'OPCIÓ QUE VOLGUIS DE LA BOTIGA
+        static void MenuEscollirBotiga()
         {
             int opcio;
             int nEl = 5;
@@ -38,8 +86,8 @@ namespace Botiga_Virtual
             do
             {
                 Console.Clear();
-                Console.Write(MenuLlistat());
-                Console.WriteLine("(Recordem que la botiga té " + nEl + ". Ho ha de tenir en compter al hora d'afegir productes. Si vol ampliar la tenda premi 3)");
+                Console.Write(MenuBotiga());
+                Console.WriteLine("(Recordem que la botiga té capacitat de " + nEl + " productes. Ho ha de tenir en compter al hora d'afegir productes. Si vol ampliar la tenda premi 3)");
                 Console.Write("Escull una opcio: ");
                 opcio = Convert.ToChar(Console.ReadLine());
                 switch (opcio)
@@ -76,6 +124,20 @@ namespace Botiga_Virtual
                         Console.Clear();
                         Mostrar(producte, preu);
                         break;
+                    case '9':
+                        Console.Clear();
+                        //BotigaToString();
+                        break;
+                    case 'T':
+                        Console.Clear();
+                        Console.WriteLine(MenuPrincipal());
+                        MenuLlistat();
+                        break;
+                    case 't':
+                        Console.Clear();
+                        Console.WriteLine(MenuPrincipal());
+                        MenuLlistat();
+                        break;
                     case 'q':
                         break;
                     case 'Q':
@@ -85,6 +147,7 @@ namespace Botiga_Virtual
             } while (opcio != 'Q' && opcio != 'q');
 
         }
+        // MÉTODES BOTIGA
         static void AfegirProducte(string producte, double preu)
         {
             Console.WriteLine("Introdueix el nom del producte a afegir");
@@ -145,6 +208,85 @@ namespace Botiga_Virtual
                     Console.WriteLine("Quin preu vols afegir ara?");
                     preu[i] = Convert.ToInt32(Console.ReadLine());
                 }
+            }
+        }
+        // MENU CISTELLA
+        static string MenuCistella()
+        {
+            string TextMenu =
+               "╔══════════════════════════════════════════════════╗\n" +
+               "║                   * Cistella *                   ║ \n" +
+               "╠══════════════════════════════════════════════════╣ \n" +
+               "║              1) Comprar Producte                 ║ \n" +
+               "║              2) Comprar ProducteS                ║ \n" +
+               "║              3) Ordenar Cistella                 ║ \n" +
+               "║              4) Mostrar Cistella                 ║ \n" +
+               "║              4) CistellaToString                 ║ \n" +
+               "║              T) Tornar a menu anterior           ║ \n" +
+               "║                                                  ║ \n" +
+               "║              q) Sortir                           ║ \n" +
+               "╚══════════════════════════════════════════════════╝ \n";
+
+            return TextMenu;
+        }
+        // ESCULL OPCIÓ CISTELLA
+        static void MenuEscollirCistella()
+        {
+            int opcio;
+            int nEl = 5;
+            string[] producte = new string[nEl];
+            double[] preu = new double[nEl];
+            do
+            {
+                Console.Clear();
+                Console.Write(MenuCistella());
+                Console.Write("Escull una opcio: ");
+                opcio = Convert.ToChar(Console.ReadLine());
+                switch (opcio)
+                {
+                    case '1':
+                        Console.Clear();
+                        ComprarProducte(producte, preu);
+                        break;
+                    case '2':
+                        Console.Clear();
+                        //ComprarProducteS();
+                        break;
+                    case '3':
+                        Console.Clear();
+                        //OrdenarCistella();
+                        break;
+                    case '4':
+                        Console.Clear();
+                        //CistellaToString();
+                        break;
+                    case 'T':
+                        Console.Clear();
+                        Console.WriteLine(MenuPrincipal());
+                        MenuLlistat();
+                        break;
+                    case 't':
+                        Console.Clear();
+                        Console.WriteLine(MenuPrincipal());
+                        MenuLlistat();
+                        break;
+                    case 'q':
+                        break;
+                    case 'Q':
+                        break;
+
+                }
+            } while (opcio != 'Q' && opcio != 'q');
+        }
+        // METODES CISTELLA
+        static void ComprarProducte(string[] producte, double[] preu)
+        {
+            Mostrar(producte,preu);
+            string opcio = "";
+            Console.WriteLine("Quin producte vols afegir");
+            for (int i = 0; i < producte.Length; i++)
+            {
+                
             }
         }
     }
