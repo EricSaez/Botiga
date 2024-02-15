@@ -8,19 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Michel\\.nuget\\packages\\": {}
+    "C:\\Users\\saeze\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
+      "projectUniqueName": "C:\\Users\\saeze\\Documents\\GitHub\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
       "projectName": "Botiga_Virtual",
-      "projectPath": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
-      "packagesPath": "C:\\Users\\Michel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\Botiga_Virtual\\Botiga_Virtual\\obj\\",
+      "projectPath": "C:\\Users\\saeze\\Documents\\GitHub\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
+      "packagesPath": "C:\\Users\\saeze\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\saeze\\Documents\\GitHub\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Michel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\saeze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,11 +45,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
