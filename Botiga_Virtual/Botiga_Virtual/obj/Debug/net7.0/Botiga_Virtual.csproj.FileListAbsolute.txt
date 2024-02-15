@@ -30,3 +30,18 @@ C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\n
 C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.pdb
 C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.genruntimeconfig.cache
 C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\ref\Botiga_Virtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.exe
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.deps.json
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.runtimeconfig.json
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\bin\Debug\net7.0\Botiga_Virtual.pdb
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.AssemblyInfoInputs.cache
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.AssemblyInfo.cs
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.csproj.CoreCompileInputs.cache
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.sourcelink.json
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\refint\Botiga_Virtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.pdb
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\Botiga_Virtual.genruntimeconfig.cache
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\Botiga\Botiga_Virtual\Botiga_Virtual\obj\Debug\net7.0\ref\Botiga_Virtual.dll
