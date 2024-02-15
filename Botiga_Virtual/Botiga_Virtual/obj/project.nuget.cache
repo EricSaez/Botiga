@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "SlH6UBtJWpyAD13+4nfjl8F9a2hj/WUp9JqbqReMCms0k3CW7Tw/JMTz85NH9zU4QesF8B/vOzI575DZE7ZMdw==",
+  "dgSpecHash": "DzQzYY0+ZPpts5SGb4XFx4ZThrgHgnjjiKpTWW6QvRAG86oSXewmbCXYeC2cF/HeYtyXnqAMpSjlT009Rq0Y3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
+  "projectFilePath": "C:\\Users\\mibel\\Desktop\\GIT Trabajos\\GIT Botiga\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\Botiga_Virtual.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\mibel\\Desktop\\GIT Trabajos\\GIT Botiga\\Botiga\\Botiga_Virtual\\Botiga_Virtual\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

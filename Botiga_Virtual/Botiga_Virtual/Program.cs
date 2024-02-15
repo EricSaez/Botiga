@@ -122,7 +122,7 @@ namespace Botiga_Virtual
                         break;
                     case '8':
                         Console.Clear();
-                        Mostrar(producte, preu);
+                        Mostrar(ref producte, ref preu);
                         break;
                     case '9':
                         Console.Clear();
@@ -170,7 +170,7 @@ namespace Botiga_Virtual
                 nEl++;
             }
         }
-        static void Mostrar(string[] producte, double[] preu)
+        static void Mostrar(ref string[] producte, ref double[] preu)
         {
             Console.WriteLine("Llistat de productes i preus");
             for (int i = 0; i < producte.Length; i++)
@@ -258,9 +258,9 @@ namespace Botiga_Virtual
         static void MenuEscollirCistella()
         {
             int opcio;
-            int nEl = 5;
-            string[] producte = new string[nEl];
-            double[] preu = new double[nEl];
+            int nEl = 0;
+            string[] producte = new string[5];
+            double[] preu = new double[5];
             do
             {
                 Console.Clear();
@@ -271,7 +271,7 @@ namespace Botiga_Virtual
                 {
                     case '1':
                         Console.Clear();
-                        ComprarProducte(producte, preu);
+                        ComprarProducte(ref producte, ref preu);
                         break;
                     case '2':
                         Console.Clear();
@@ -304,9 +304,9 @@ namespace Botiga_Virtual
             } while (opcio != 'Q' && opcio != 'q');
         }
         // METODES CISTELLA
-        static void ComprarProducte(string[] producte, double[] preu)
+        static void ComprarProducte(ref string[] producte, ref double[] preu)
         {
-            Mostrar(producte, preu);
+            Mostrar(ref producte, ref preu);
             string opcio = "";
             Console.WriteLine("Quin producte vols afegir");
             for (int i = 0; i < producte.Length; i++)
