@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Botiga_Virtual
-build_property.ProjectDir = C:\Users\saeze\Documents\GitHub\Botiga\Botiga_Virtual\Botiga_Virtual\
+build_property.ProjectDir = C:\Users\Michel\Desktop\GIT TRABAJOS\GIT Botiga\Botiga_Virtual\Botiga_Virtual\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
