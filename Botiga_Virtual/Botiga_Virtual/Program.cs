@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Runtime;
+using System.Text.Json;
 
 namespace Botiga_Virtual
 {
@@ -42,8 +43,8 @@ namespace Botiga_Virtual
                         break;
                     case '2':
                         Console.Clear();
-                        Console.WriteLine(MenuCistella());
-                        MenuEscollirCistella();
+                        //Console.WriteLine(MenuCistella());
+                        //MenuEscollirCistella();
                         break;
                     case 'q':
                         break;
@@ -126,7 +127,7 @@ namespace Botiga_Virtual
                         break;
                     case '9':
                         Console.Clear();
-                        //BotigaToString();
+                        BotigaToString(producte, preu, nEl);
                         break;
                     case 'T':
                         Console.Clear();
@@ -159,15 +160,19 @@ namespace Botiga_Virtual
         static void AfegirProducteS(string[] producte, ref double[] preu, ref int nEl)
         {
             Console.WriteLine("Per deixar d'afegir productes escriu -1");
-            for (int i = 0; i < producte.Length; i++)
+            string afegit = " ";
+            Console.WriteLine("Introdueix el nom del producte a afegir");
+            afegit = Console.ReadLine();
+            for (int i = 0; (i < producte.Length || afegit != "-1"); i++)
             {
-                Console.WriteLine("Introdueix el nom del producte a afegir");
-                producte[i] = Console.ReadLine();
-                if (producte[i] == "-1") break;
+                if (afegit == "-1") return;
+                producte[i] = afegit;
                 Console.WriteLine("Introdueix el preu de " + producte[i]);
                 preu[i] = Convert.ToDouble(Console.ReadLine());
-                if (preu[i] == -1) break;
-                nEl++;
+                Console.WriteLine("Introdueix el nom del producte a afegir");
+                afegit = Console.ReadLine();
+                if (preu[i] == -1) return;
+            nEl++;
             }
         }
         static void Mostrar(ref string[] producte, ref double[] preu)
@@ -175,7 +180,7 @@ namespace Botiga_Virtual
             Console.WriteLine("Llistat de productes i preus");
             for (int i = 0; i < producte.Length; i++)
             {
-                Console.Write("{0} ", "Nom: " + producte[i] + "Preu: " + preu[i]);
+                Console.Write("{0} ", "Nom: " + producte[i] + "   Preu: " + preu[i]);
                 Console.WriteLine();
             }
             Thread.Sleep(5000);
@@ -235,6 +240,18 @@ namespace Botiga_Virtual
                     Console.WriteLine(nom + " ha pasat a ser " + productes[i]);
                 }
             }
+        }
+        static void BotigaToString(string[] producte, double[] preu, int nEl)
+        {
+            Console.WriteLine("Llistat de productes i preus");
+            for (int i = 0; i < producte.Length; i++)
+            {
+                Console.Write("{0} ", "Nom: " + producte[i] + "   Preu: " + preu[i]);
+                Console.WriteLine();
+            }
+            Console.WriteLine("Actualment tenim a la cistella: " + nEl);
+            Console.WriteLine("Encara podem emplenar la nostra cistella amb: " + (producte.Length - nEl));
+            Thread.Sleep(5000);
         }
         // MENU CISTELLA
         static string MenuCistella()
@@ -316,3 +333,5 @@ namespace Botiga_Virtual
         }
     }
 }
+
+
