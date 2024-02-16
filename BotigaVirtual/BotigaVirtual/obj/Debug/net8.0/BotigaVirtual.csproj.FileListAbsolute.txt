@@ -1,0 +1,15 @@
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\bin\Debug\net8.0\BotigaVirtual.exe
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\bin\Debug\net8.0\BotigaVirtual.deps.json
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\bin\Debug\net8.0\BotigaVirtual.runtimeconfig.json
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\bin\Debug\net8.0\BotigaVirtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\bin\Debug\net8.0\BotigaVirtual.pdb
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.AssemblyInfoInputs.cache
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.AssemblyInfo.cs
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.csproj.CoreCompileInputs.cache
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.sourcelink.json
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\refint\BotigaVirtual.dll
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.pdb
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\BotigaVirtual.genruntimeconfig.cache
+C:\Users\mibel\Desktop\GIT Trabajos\GIT Botiga\BotigaVirtual\BotigaVirtual\obj\Debug\net8.0\ref\BotigaVirtual.dll

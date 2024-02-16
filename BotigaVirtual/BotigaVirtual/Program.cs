@@ -128,11 +128,11 @@ namespace Botiga_Virtual
                         break;
                     case '6':
                         Console.Clear();
-                        //OrdenarProducte();
+                        OrdenarProducte(ref producte, ref preu);
                         break;
                     case '7':
                         Console.Clear();
-                        //OrdenarPreus();
+                        OrdenarPreu(ref producte, ref preu);
                         break;
                     case '8':
                         Console.Clear();
@@ -189,17 +189,6 @@ namespace Botiga_Virtual
                 if (preu[i] == -1) return;
                 nEl++;
             }
-            Return();
-        }
-        static void Mostrar(ref string[] producte, ref double[] preu)
-        {
-            Console.WriteLine("Llistat de productes i preus");
-            for (int i = 0; i < producte.Length; i++)
-            {
-                Console.Write("{0} ", "Nom: " + producte[i] + "   Preu: " + preu[i]);
-                Console.WriteLine();
-            }
-            Thread.Sleep(5000);
             Return();
         }
         static void AmpliarTenda(ref string[] productes, ref double[] preus)
@@ -261,6 +250,66 @@ namespace Botiga_Virtual
             }
             Return();
         }
+        static void OrdenarProducte(ref string[] productes, ref double[] preus)
+        {
+            int nEl = productes.Length;
+
+            for (int i = 0; i < nEl - 1; i++)
+            {
+                for (int j = i + 1; j < nEl; j++)
+                {
+                    if (productes[i].CompareTo(productes[j]) > 0)
+                    {
+                        string tempProducte = productes[i];
+                        productes[i] = productes[j];
+                        productes[j] = tempProducte;
+
+                        double tempPreu = preus[i];
+                        preus[i] = preus[j];
+                        preus[j] = tempPreu;
+                    }
+                }
+            }
+            Console.WriteLine("Productes per ordre alfabétic ordenats correctament");
+            Return();
+        }
+        static void OrdenarPreu(ref string[] productes, ref double[] preus)
+        {
+            bool intercanvi;
+            int nEl = productes.Length;
+            do
+            {
+                intercanvi = false;
+                for (int i = 0; i < nEl - 1; i++)
+                {
+                    if (preus[i] > preus[i + 1])
+                    {
+                        string posicioproducte = productes[i];
+                        productes[i] = productes[i + 1];
+                        productes[i + 1] = posicioproducte;
+
+                        double posiciopreu = preus[i];
+                        preus[i] = preus[i + 1];
+                        preus[i + 1] = posiciopreu;
+
+                        intercanvi = true;
+                    }
+                }
+                nEl--;
+            } while (intercanvi);
+            Console.WriteLine("Productes per preu ordenats correctament");
+            Return();
+        }
+        static void Mostrar(ref string[] producte, ref double[] preu)
+        {
+            Console.WriteLine("Llistat de productes i preus");
+            for (int i = 0; i < producte.Length; i++)
+            {
+                Console.Write("{0} ", "Nom: " + producte[i] + "   Preu: " + preu[i]);
+                Console.WriteLine();
+            }
+            Return();
+        }
         static void BotigaToString(string[] producte, double[] preu, int nEl)
         {
             Console.WriteLine("Llistat de productes i preus");
@@ -271,7 +320,6 @@ namespace Botiga_Virtual
             }
             Console.WriteLine("Actualment tenim a la cistella: " + nEl);
             Console.WriteLine("Encara podem emplenar la nostra cistella amb: " + (producte.Length - nEl));
-            Thread.Sleep(5000);
             Return();
         }
         // MENU CISTELLA
@@ -346,11 +394,7 @@ namespace Botiga_Virtual
         {
             Mostrar(ref producte, ref preu);
             string opcio = "";
-            Console.WriteLine("Quin producte vols afegir");
-            for (int i = 0; i < producte.Length; i++)
-            {
-
-            }
+            Console.WriteLine(producte[1]);
         }
     }
 }
