@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3D801-921A-4B81-BBF4-5F24B3CBC81A}|BotigaVirtual\\BotigaVirtual.csproj|c:\\users\\michel\\desktop\\git trabajos\\git botiga\\botigavirtual\\botigavirtual\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF3D801-921A-4B81-BBF4-5F24B3CBC81A}|BotigaVirtual\\BotigaVirtual.csproj|solutionrelative:botigavirtual\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF3D801-921A-4B81-BBF4-5F24B3CBC81A}|BotigaVirtual\\BotigaVirtual.csproj|c:\\users\\michel\\desktop\\git trabajos\\git botiga\\botigavirtual\\botigavirtual\\botigavirtual.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AFF3D801-921A-4B81-BBF4-5F24B3CBC81A}|BotigaVirtual\\BotigaVirtual.csproj|solutionrelative:botigavirtual\\botigavirtual.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BotigaVirtual.csproj",
+              "DocumentMoniker": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\BotigaVirtual.csproj",
+              "RelativeDocumentMoniker": "BotigaVirtual\\BotigaVirtual.csproj",
+              "ToolTip": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\BotigaVirtual.csproj",
+              "RelativeToolTip": "BotigaVirtual\\BotigaVirtual.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-17T17:01:10.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\Program.cs",
+              "RelativeDocumentMoniker": "BotigaVirtual\\Program.cs",
+              "ToolTip": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\Program.cs",
+              "RelativeToolTip": "BotigaVirtual\\Program.cs",
+              "ViewState": "AQIAAIgBAAAAAAAAAAAIwHEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-17T16:54:00.206Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
