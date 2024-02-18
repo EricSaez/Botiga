@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Michel\\.nuget\\packages\\": {}
+    "C:\\Users\\mibel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\BotigaVirtual.csproj",
+      "projectUniqueName": "C:\\Users\\mibel\\Desktop\\GIT Trabajos\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\BotigaVirtual.csproj",
       "projectName": "BotigaVirtual",
-      "projectPath": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\BotigaVirtual.csproj",
-      "packagesPath": "C:\\Users\\Michel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michel\\Desktop\\GIT TRABAJOS\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\obj\\",
+      "projectPath": "C:\\Users\\mibel\\Desktop\\GIT Trabajos\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\BotigaVirtual.csproj",
+      "packagesPath": "C:\\Users\\mibel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mibel\\Desktop\\GIT Trabajos\\GIT Botiga\\BotigaVirtual\\BotigaVirtual\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mibel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,11 +40,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
