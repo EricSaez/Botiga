@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Runtime;
+using System.Runtime.Serialization.Formatters;
 using System.Text.Json;
 
 namespace Botiga_Virtual
@@ -183,16 +184,17 @@ namespace Botiga_Virtual
                 afegit = Console.ReadLine();
                 for (int i = 0; (i < producte.Length || afegit != "-1"); i++)
                 {
-                    if (afegit == "-1") return;
+                    if (afegit == "-1")
+                        Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
                     producte[i] = afegit;
                     Console.WriteLine("Introdueix el preu de " + producte[i]);
                     preu[i] = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Introdueix el nom del producte a afegir");
                     afegit = Console.ReadLine();
-                    if (preu[i] == -1) return;
+                    if (preu[i] == -1)
+                        Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
                     nEl++;
                 }
-                Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
             }
             static void AmpliarTenda(ref string[] productes, ref double[] preus, ref int nEl, ref string[] productesTotal, ref double[] preusTotal)
             {
@@ -338,8 +340,8 @@ namespace Botiga_Virtual
                 "║              1) Comprar Producte                 ║ \n" +
                 "║              2) Comprar ProducteS                ║ \n" +
                 "║              3) Ordenar Cistella                 ║ \n" +
-                "║              4) Mostrar Cistella                 ║ \n" +
                 "║              4) CistellaToString                 ║ \n" +
+                "║              5) CompraTotal                      ║ \n" +
                 "║              T) Tornar a menu anterior           ║ \n" +
                 "║                                                  ║ \n" +
                 "║              q) Sortir                           ║ \n" +
@@ -376,7 +378,7 @@ namespace Botiga_Virtual
                             break;
                         case '5':
                             Console.Clear();
-                            //CompraTotal(ref producte, ref preu, ref nEl);
+                            CompraTotal(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
                             break;
                         case 'T':
                             Console.Clear();
@@ -397,7 +399,7 @@ namespace Botiga_Virtual
                 } while (opcio != 'Q' && opcio != 'q');
             }
             // METODES CISTELLA
-            static void ComprarProducte(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preustotal, ref int sumatotal)
+            static void ComprarProducte(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preustotal)
             {
                 MostrarAux(ref producte, ref preu, ref nEl);
                 Console.WriteLine("Quin producte vols afegir a la cistella?");
@@ -408,10 +410,30 @@ namespace Botiga_Virtual
                     {
                         Console.WriteLine("Producte afegit a la cistella: " + producte[i]);
                         productesTotal[i] = producte[i];
-                        preustotal[i] = 
+                        preustotal[i] = preu[i];
                     }
                 }
+                Console.WriteLine("Producte afegit a la cistella amb éxit");
                 Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preustotal);
+            }
+            static void OrdenarProductesiPreusCistellaPrimeraPosicio(ref string[] productesTotal, ref double[] preustotal)
+            {
+                for (int i = 0;i < productesTotal.Length;i++)
+                {
+                    int contador = 0;
+                    if (productesTotal[contador] == "")
+                    {
+                        productesTotal[i] = productesTotal[contador];
+                    }
+                    if (preustotal[contador] == null)
+                    {
+                        preustotal[i] = preustotal[contador];
+                    }
+                    if (i != contador)
+                    {
+                        contador++;
+                    }
+                }
             }
             // Aquest auxiliar només està fet per que quan cridem Mostrar desde ComprarProducte no salti el Return
             static void MostrarAux(ref string[] producte, ref double[] preu, ref int nEl)
@@ -431,50 +453,53 @@ namespace Botiga_Virtual
                 MostrarAux(ref producte, ref preu, ref nEl);
                 Console.WriteLine("Per deixar d'afegir productes escriu -1");
                 string afegit = " ";
-                Console.WriteLine("Introdueix el nom del producte a afegir");
+                Console.WriteLine("Introdueix el nom del producte a afegir a la cistella");
                 afegit = Console.ReadLine();
-                for (int i = nEl; (i < producte.Length && afegit != "-1"); i++)
+                for (int i = nEl; (i < productesTotal.Length && afegit != "-1"); i++)
                 {
-                    if (afegit == "-1") break;
-                    producte[i] = afegit;
-                    Console.WriteLine("Introdueix el preu de " + producte[i]);
-                    preu[i] = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Introdueix el nom del producte a afegir");
+                    if (afegit == "-1")
+                        Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
+                    productesTotal[i] = afegit;
+                    preusTotal[i] = preu[i];
+                    Console.WriteLine("Introdueix el nom del producte a afegir a la cistella");
                     afegit = Console.ReadLine();
-                    if (preu[i] == -1) break;
-                    nEl++;
+
                 }
-                Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
             }
             static void OrdenarCistella(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preusTotal)
             {
+                OrdenarProductesiPreusCistellaPrimeraPosicio(ref productesTotal, ref preusTotal);
                 for (int i = 0; i < nEl - 1; i++)
                 {
                     for (int j = i + 1; j < nEl; j++)
                     {
-                        if (producte[i].CompareTo(producte[j]) > 0)
+                        if (productesTotal[i].CompareTo(productesTotal[j]) > 0)
                         {
-                            string tempProducte = producte[i];
-                            producte[i] = producte[j];
-                            producte[j] = tempProducte;
+                            string tempProducte = productesTotal[i];
+                            productesTotal[i] = productesTotal[j];
+                            productesTotal[j] = tempProducte;
 
-                            double tempPreu = preu[i];
-                            preu[i] = preu[j];
-                            preu[j] = tempPreu;
+                            double tempPreu = preusTotal[i];
+                            preusTotal[i] = preusTotal[j];
+                            preusTotal[j] = tempPreu;
                         }
                     }
                 }
                 Console.WriteLine("Productes per ordre alfabétic ordenats correctament");
                 Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
             }
-            static void CompraTotal(string[] productesCistella, double[] preusCistella, int nElCistella)
+            static void CompraTotal(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preusTotal)
             {
+                double sumatotal = 0;
                 Console.WriteLine("Cistella:");
-                for (int i = 0; i < nElCistella; i++)
+                for (int i = 0; i < productesTotal.Length; i++)
                 {
-                    Console.WriteLine("Producte: " + productesCistella[i] + "  Preu: " + preusCistella[i]);
+                    if (productesTotal[i] != "")
+                        Console.WriteLine("Producte: " + productesTotal[i] + "  Preu: " + preusTotal[i]);
+                    sumatotal += preusTotal[i];
                 }
-                Console.WriteLine("Preu Total: ");
+                Console.WriteLine("Preu Total: " + sumatotal);
+                Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
             }
 
 
