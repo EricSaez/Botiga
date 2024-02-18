@@ -354,6 +354,7 @@ namespace Botiga_Virtual
                 char opcio;
                 do
                 {
+                    int nElcis = 0;
                     Console.Clear();
                     Console.Write(MenuCistella());
                     Console.Write("Escull una opcio: ");
@@ -362,11 +363,11 @@ namespace Botiga_Virtual
                     {
                         case '1':
                             Console.Clear();
-                            ComprarProducte(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
+                            ComprarProducte(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal, ref nElcis);
                             break;
                         case '2':
                             Console.Clear();
-                            ComprarProducteS(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
+                            ComprarProducteS(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal, ref nElcis);
                             break;
                         case '3':
                             Console.Clear();
@@ -374,7 +375,7 @@ namespace Botiga_Virtual
                             break;
                         case '4':
                             Console.Clear();
-                            //CistellaToString();
+                            CistellaToString(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal, ref nElcis);
                             break;
                         case '5':
                             Console.Clear();
@@ -399,8 +400,14 @@ namespace Botiga_Virtual
                 } while (opcio != 'Q' && opcio != 'q');
             }
             // METODES CISTELLA
-            static void ComprarProducte(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preustotal)
+            static void ComprarProducte(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preustotal, ref int nElcis)
             {
+                if (nElcis == productesTotal.Length)
+                {
+                    Console.WriteLine("La teva cistella esta plena");
+                    Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preustotal);
+                }
+                    
                 MostrarAux(ref producte, ref preu, ref nEl);
                 Console.WriteLine("Quin producte vols afegir a la cistella?");
                 string opcio = Console.ReadLine();
@@ -411,6 +418,7 @@ namespace Botiga_Virtual
                         Console.WriteLine("Producte afegit a la cistella: " + producte[i]);
                         productesTotal[i] = producte[i];
                         preustotal[i] = preu[i];
+                        nElcis++;
                     }
                 }
                 Console.WriteLine("Producte afegit a la cistella amb éxit");
@@ -445,25 +453,31 @@ namespace Botiga_Virtual
                     {
                         Console.Write("{0} ", "Nom: " + producte[i] + "   Preu: " + preu[i]);
                         Console.WriteLine();
+
                     }
                 }
             }
-            static void ComprarProducteS(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preusTotal)
+            static void ComprarProducteS(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preusTotal, ref int nElcis)
             {
                 MostrarAux(ref producte, ref preu, ref nEl);
                 Console.WriteLine("Per deixar d'afegir productes escriu -1");
                 string afegit = " ";
                 Console.WriteLine("Introdueix el nom del producte a afegir a la cistella");
                 afegit = Console.ReadLine();
-                for (int i = nEl; (i < productesTotal.Length && afegit != "-1"); i++)
+                for (int i = nEl; (i < productesTotal.Length); i++)
                 {
                     if (afegit == "-1")
                         Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
+                    if (nElcis == productesTotal.Length)
+                    {
+                        Console.WriteLine("La teva cistella esta plena");
+                        Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
+                    }
                     productesTotal[i] = afegit;
                     preusTotal[i] = preu[i];
                     Console.WriteLine("Introdueix el nom del producte a afegir a la cistella");
                     afegit = Console.ReadLine();
-
+                    
                 }
             }
             static void OrdenarCistella(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preusTotal)
@@ -499,6 +513,21 @@ namespace Botiga_Virtual
                     sumatotal += preusTotal[i];
                 }
                 Console.WriteLine("Preu Total: " + sumatotal);
+                Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
+            }
+            static void CistellaToString(ref string[] producte, ref double[] preu, ref int nEl, ref string[] productesTotal, ref double[] preusTotal, ref int nElcis)
+            {
+                double cost = 0;
+                Console.WriteLine("Llistat de productes i preus afegit a la cistella");
+                for (int i = 0; i < productesTotal.Length; i++)
+                {
+                    Console.Write("{0} ", "Nom: " + productesTotal[i] + "   Preu: " + preu[i]);
+                    cost += preu[i];
+                    Console.WriteLine();
+                }
+                Console.WriteLine("El cost total de la compra es de: " + cost);
+                Console.WriteLine("Actualment tenim " + nElcis + " a la cistella");
+                Console.WriteLine("Encara podem emplenar la nostra cistella amb: " + (productesTotal.Length - nElcis));
                 Return(ref producte, ref preu, ref nEl, ref productesTotal, ref preusTotal);
             }
 
